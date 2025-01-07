@@ -1,6 +1,7 @@
 import gymnasium as gym
 from Environment.Preprocess import PreprocessAtari
-
+import ale_py
+gym.register_envs(ale_py)
 
 def make_env(mode):
     env = gym.make('MsPacmanDeterministic-v0', render_mode=mode)
